@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Example Application</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        table, th, td {border-style:none!important;}
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+    <table class="table-condensed">
+    <tr><td><h1>title: <?=$ticket->getTitle()?></h1></td></tr>
+    <tr><td><p><strong>description: <?=$ticket->getDescription()?></strong></p></td></tr>
+    <tr><td><p>Component: <?=$ticket->getComponent()?></p></td></tr>
+    </table>
+</div>
+</body>
+</html>
+

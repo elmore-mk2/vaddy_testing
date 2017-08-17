@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Example Application</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+<h1>New Ticket</h1>
+<form method="post" action="/ticket/new">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" name="title" id="title" type="text" size="60" /><br />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" rows="6" cols="80"></textarea><br />
+    </div>
+    <div class="form-group">
+    <label for="component">Component</label>
+    <select class="form-control" name="component">
+        <option value=""></option>
+<?php
+foreach($components as $component): ?>
+    <option value="<?=$component->getId()?>"><?=$component->getName()?></option>
+<?php
+endforeach;
+?>
+    </select><br />
+    </div>
+
+    <tr><td><input type="submit" class="pure-button" value="Create" /></td></tr>
+</form>
+</div>
+</body>
+</html>
+
+
