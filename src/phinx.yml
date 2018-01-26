@@ -13,8 +13,8 @@ environments:
         name: vaddy_testing
         #user: root
         user: postgres
-        #pass: MySQL_passw0rd!!
-        pass: Postgresql_passw0rd!!
+        #pass: ####
+        pass: ####
         #port: 3306
         port: 5432
         charset: utf8
